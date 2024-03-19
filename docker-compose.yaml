@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+    whproject:
+        build: .
+        image: django-honeypotf
+        container_name: django-honeypotf
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/code
+            - ./db.sqlite3:/code/db.sqlite3
